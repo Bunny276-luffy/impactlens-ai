@@ -1,0 +1,191 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+  engineType = "library"
+}
+
+enum Role {
+  ADMIN
+  NGO
+  DONOR
+  VOLUNTEER
+}
+
+model User {
+  id           String         @id @default(cuid())
+  email        String         @unique
+  passwordHash String
+  name         String
+  role         Role
+  createdAt    DateTime       @default(now())
+  updatedAt    DateTime       @updatedAt
+  ngoProfile   NGO?
+  donorProfile Donor?
+  volunteerProfile Volunteer?
+  notifications Notification[]
+}
+
+model NGO {
+  id           String     @id @default(cuid())
+  name         String
+  mission      String?
+  contactEmail String
+  contactPhone String?
+  address      String?
+  userId       String?    @unique
+  user         User?      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  children     Child[]
+  donations    Donation[]
+  tasks        Task[]
+  createdAt    DateTime   @default(now())
+  updatedAt    DateTime   @updatedAt
+}
+
+model Donor {
+  id           String     @id @default(cuid())
+  name         String
+  userId       String?    @unique
+  user         User?      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  totalDonated Float      @default(0)
+  donations    Donation[]
+  createdAt    DateTime   @default(now())
+  updatedAt    DateTime   @updatedAt
+}
+
+model Volunteer {
+  id           String     @id @default(cuid())
+  name         String
+  contactEmail String
+  userId       String?    @unique
+  user         User?      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  status       String     @default("Active") // Active, Idle
+  createdAt    DateTime   @default(now())
+  updatedAt    DateTime   @updatedAt
+  healthRecords HealthRecord[]
+  tasks        Task[]
+}
+
+model Child {
+  id                   String            @id @default(cuid())
+  name                 String
+  age                  Int
+  gender               String
+  school               String
+  guardianName         String?
+  guardianPhone        String?
+  guardianEmail        String?
+  guardianRelationship String?
+  ngoId                String
+  ngo                  NGO               @relation(fields: [ngoId], references: [id], onDelete: Cascade)
+  createdAt            DateTime          @default(now())
+  updatedAt            DateTime          @updatedAt
+  healthRecords        HealthRecord[]
+  educationRecords     EducationRecord[]
+  attendance           Attendance[]
+  aiReports            AIReport[]
+  donations            Donation[]
+}
+
+model Donation {
+  id        String   @id @default(cuid())
+  amount    Float
+  date      DateTime @default(now())
+  usage     String   // "Food", "Education", "Health", "General"
+  donorId   String?
+  donor     Donor?   @relation(fields: [donorId], references: [id], onDelete: SetNull)
+  ngoId     String
+  ngo       NGO      @relation(fields: [ngoId], references: [id], onDelete: Cascade)
+  childId   String?
+  child     Child?   @relation(fields: [childId], references: [id], onDelete: SetNull)
+  createdAt DateTime @default(now())
+}
+
+model HealthRecord {
+  id             String     @id @default(cuid())
+  childId        String
+  child          Child      @relation(fields: [childId], references: [id], onDelete: Cascade)
+  height         Float      // in cm
+  weight         Float      // in kg
+  bmi            Float
+  nutritionScore Int        // 1 to 100
+  healthReport   String?    // text details
+  riskAlerts     String?    // text detail or null
+  recordedById   String?
+  recordedBy     Volunteer? @relation(fields: [recordedById], references: [id], onDelete: SetNull)
+  date           DateTime   @default(now())
+  createdAt      DateTime   @default(now())
+}
+
+model EducationRecord {
+  id                           String   @id @default(cuid())
+  childId                      String
+  child                        Child    @relation(fields: [childId], references: [id], onDelete: Cascade)
+  learningProgress             String   // e.g. "Excellent", "Needs Improvement"
+  attendanceRate               Float    // e.g. 85.5%
+  learningDifficultyPrediction String?  // text detail or null
+  talentIdentification         String?  // e.g. "Math", "Drawing"
+  date                         DateTime @default(now())
+  createdAt                    DateTime @default(now())
+}
+
+model Attendance {
+  id        String   @id @default(cuid())
+  childId   String
+  child     Child    @relation(fields: [childId], references: [id], onDelete: Cascade)
+  date      DateTime
+  status    String   // "PRESENT", "ABSENT", "EXCUSED"
+  createdAt DateTime @default(now())
+}
+
+model AIReport {
+  id                           String   @id @default(cuid())
+  childId                      String
+  child                        Child    @relation(fields: [childId], references: [id], onDelete: Cascade)
+  riskScore                    Float    // 0 to 100
+  dropoutPrediction            String   // "HIGH", "MEDIUM", "LOW"
+  malnutritionPrediction       String   // "HIGH", "MEDIUM", "LOW"
+  learningDifficultyPrediction String   // "HIGH", "MEDIUM", "LOW"
+  talentIdentification         String?
+  suggestedIntervention        String
+  priorityRanking              Int      // 1 (Highest) to 5 (Lowest)
+  aiSummary                    String
+  date                         DateTime @default(now())
+  createdAt                    DateTime @default(now())
+}
+
+enum NotificationType {
+  DONATION_CONFIRMATION
+  VOLUNTEER_REMINDER
+  RISK_ALERT
+  ACHIEVEMENT_BADGE
+}
+
+model Notification {
+  id        String           @id @default(cuid())
+  userId    String
+  user      User             @relation(fields: [userId], references: [id], onDelete: Cascade)
+  type      NotificationType
+  title     String
+  message   String
+  status    String           @default("UNREAD") // "READ", "UNREAD"
+  createdAt DateTime         @default(now())
+}
+
+model Task {
+  id          String   @id @default(cuid())
+  title       String
+  description String?
+  status      String   @default("PENDING") // PENDING, COMPLETED
+  dueDate     String?
+  ngoId       String
+  ngo         NGO      @relation(fields: [ngoId], references: [id], onDelete: Cascade)
+  volunteerId String
+  volunteer   Volunteer @relation(fields: [volunteerId], references: [id], onDelete: Cascade)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+

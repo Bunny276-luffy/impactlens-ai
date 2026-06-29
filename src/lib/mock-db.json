@@ -1,0 +1,702 @@
+{
+  "users": [
+    {
+      "id": "user_admin",
+      "email": "admin@impactlens.ai",
+      "passwordHash": "$2a$10$T8M2VEXeL9HjR7.zG7hXnuzKxK8Jg6rZ3E4r5YkZ06O0kK8R1eWj.",
+      "name": "Super Admin",
+      "role": "ADMIN"
+    },
+    {
+      "id": "user_ngo",
+      "email": "ngo@impactlens.ai",
+      "passwordHash": "$2a$10$T8M2VEXeL9HjR7.zG7hXnuzKxK8Jg6rZ3E4r5YkZ06O0kK8R1eWj.",
+      "name": "Care & Share Education",
+      "role": "NGO"
+    },
+    {
+      "id": "user_donor",
+      "email": "donor@impactlens.ai",
+      "passwordHash": "$2a$10$T8M2VEXeL9HjR7.zG7hXnuzKxK8Jg6rZ3E4r5YkZ06O0kK8R1eWj.",
+      "name": "Arjun Malhotra (Global Giving)",
+      "role": "DONOR"
+    },
+    {
+      "id": "user_volunteer",
+      "email": "volunteer@impactlens.ai",
+      "passwordHash": "$2a$10$T8M2VEXeL9HjR7.zG7hXnuzKxK8Jg6rZ3E4r5YkZ06O0kK8R1eWj.",
+      "name": "Sarah Jenkins",
+      "role": "VOLUNTEER"
+    }
+  ],
+  "ngos": [
+    {
+      "id": "ngo_1",
+      "name": "Care & Share Education",
+      "mission": "Providing quality education and basic amenities to street children.",
+      "contactEmail": "ngo@impactlens.ai",
+      "contactPhone": "+91 98765 43210",
+      "address": "12, Ring Road, Lajpat Nagar, Delhi, India",
+      "userId": "user_ngo"
+    },
+    {
+      "id": "ngo_2",
+      "name": "Nutrition First",
+      "mission": "Eradicating malnutrition in rural communities through structured food programs.",
+      "contactEmail": "nutrition@impactlens.ai",
+      "contactPhone": "+91 99999 88888",
+      "address": "Flat 302, Green Glen Layout, Mumbai, India",
+      "userId": null
+    },
+    {
+      "id": "ngo_3",
+      "name": "Global Hope Foundation",
+      "mission": "Holistic child development focusing on literacy and medical aid.",
+      "contactEmail": "globalhope@impactlens.ai",
+      "contactPhone": "+91 88888 77777",
+      "address": "Koramangala 4th Block, Bangalore, India",
+      "userId": null
+    }
+  ],
+  "donors": [
+    {
+      "id": "donor_1",
+      "name": "Arjun Malhotra",
+      "userId": "user_donor",
+      "totalDonated": 15250
+    }
+  ],
+  "volunteers": [
+    {
+      "id": "volunteer_1",
+      "name": "Sarah Jenkins",
+      "contactEmail": "volunteer@impactlens.ai",
+      "userId": "user_volunteer",
+      "status": "Active"
+    }
+  ],
+  "children": [
+    {
+      "id": "child_1",
+      "name": "Rahul Kumar",
+      "age": 8,
+      "gender": "Male",
+      "school": "Central Primary School",
+      "guardianName": "Sunita Devi",
+      "guardianPhone": "+91 91234 56789",
+      "guardianEmail": null,
+      "guardianRelationship": "Mother",
+      "ngoId": "ngo_1",
+      "createdAt": "2026-01-10T12:00:00.000Z",
+      "updatedAt": "2026-06-25T12:00:00.000Z"
+    },
+    {
+      "id": "child_2",
+      "name": "Priya Sharma",
+      "age": 10,
+      "gender": "Female",
+      "school": "Girls Secondary School",
+      "guardianName": "Ramesh Sharma",
+      "guardianPhone": "+91 92345 67890",
+      "guardianEmail": "ramesh@gmail.com",
+      "guardianRelationship": "Father",
+      "ngoId": "ngo_1",
+      "createdAt": "2026-01-12T12:00:00.000Z",
+      "updatedAt": "2026-06-25T12:00:00.000Z"
+    },
+    {
+      "id": "child_3",
+      "name": "Amit Patel",
+      "age": 12,
+      "gender": "Male",
+      "school": "Municipal School West",
+      "guardianName": "Sita Patel",
+      "guardianPhone": "+91 93456 78901",
+      "guardianEmail": null,
+      "guardianRelationship": "Mother",
+      "ngoId": "ngo_1",
+      "createdAt": "2026-02-15T12:00:00.000Z",
+      "updatedAt": "2026-06-26T12:00:00.000Z"
+    },
+    {
+      "id": "child_4",
+      "name": "Sneha Reddy",
+      "age": 9,
+      "gender": "Female",
+      "school": "Care & Share Learning Center",
+      "guardianName": "K. Reddy",
+      "guardianPhone": "+91 94567 89012",
+      "guardianEmail": "kreddy@reddymail.com",
+      "guardianRelationship": "Father",
+      "ngoId": "ngo_1",
+      "createdAt": "2026-02-20T12:00:00.000Z",
+      "updatedAt": "2026-06-24T12:00:00.000Z"
+    },
+    {
+      "id": "child_5",
+      "name": "Vikram Singh",
+      "age": 7,
+      "gender": "Male",
+      "school": "Municipal School West",
+      "guardianName": "Geeta Singh",
+      "guardianPhone": "+91 95678 90123",
+      "guardianEmail": null,
+      "guardianRelationship": "Mother",
+      "ngoId": "ngo_1",
+      "createdAt": "2026-03-01T12:00:00.000Z",
+      "updatedAt": "2026-06-27T12:00:00.000Z"
+    },
+    {
+      "id": "child_6",
+      "name": "Ananya Das",
+      "age": 11,
+      "gender": "Female",
+      "school": "Care & Share Learning Center",
+      "guardianName": "Sunil Das",
+      "guardianPhone": "+91 96789 01234",
+      "guardianEmail": "sunildas@dascorp.com",
+      "guardianRelationship": "Father",
+      "ngoId": "ngo_1",
+      "createdAt": "2026-03-05T12:00:00.000Z",
+      "updatedAt": "2026-06-28T12:00:00.000Z"
+    },
+    {
+      "id": "child_7",
+      "name": "Akash Verma",
+      "age": 13,
+      "gender": "Male",
+      "school": "Central High School",
+      "guardianName": "R. Verma",
+      "guardianPhone": "+91 97890 12345",
+      "guardianEmail": null,
+      "guardianRelationship": "Father",
+      "ngoId": "ngo_2",
+      "createdAt": "2026-01-20T12:00:00.000Z",
+      "updatedAt": "2026-06-20T12:00:00.000Z"
+    },
+    {
+      "id": "child_8",
+      "name": "Riya Gupta",
+      "age": 6,
+      "gender": "Female",
+      "school": "Care & Share Learning Center",
+      "guardianName": "Meena Gupta",
+      "guardianPhone": "+91 98901 23456",
+      "guardianEmail": null,
+      "guardianRelationship": "Mother",
+      "ngoId": "ngo_1",
+      "createdAt": "2026-04-01T12:00:00.000Z",
+      "updatedAt": "2026-06-28T12:00:00.000Z"
+    },
+    {
+      "id": "child_9",
+      "name": "Arjun Mehta",
+      "age": 9,
+      "gender": "Male",
+      "school": "Central Primary School",
+      "guardianName": "S. Mehta",
+      "guardianPhone": "+91 99012 34567",
+      "guardianEmail": "smehta@mehta.com",
+      "guardianRelationship": "Father",
+      "ngoId": "ngo_2",
+      "createdAt": "2026-02-28T12:00:00.000Z",
+      "updatedAt": "2026-06-18T12:00:00.000Z"
+    },
+    {
+      "id": "child_10",
+      "name": "Pooja Jha",
+      "age": 10,
+      "gender": "Female",
+      "school": "Municipal School West",
+      "guardianName": "T. Jha",
+      "guardianPhone": "+91 90123 45678",
+      "guardianEmail": null,
+      "guardianRelationship": "Mother",
+      "ngoId": "ngo_3",
+      "createdAt": "2026-03-10T12:00:00.000Z",
+      "updatedAt": "2026-06-24T12:00:00.000Z"
+    }
+  ],
+  "donations": [
+    {
+      "id": "don_1",
+      "amount": 250,
+      "date": "2026-06-01T10:00:00.000Z",
+      "usage": "Food",
+      "donorId": "donor_1",
+      "ngoId": "ngo_1",
+      "childId": "child_1"
+    },
+    {
+      "id": "don_2",
+      "amount": 500,
+      "date": "2026-06-05T14:30:00.000Z",
+      "usage": "Education",
+      "donorId": "donor_1",
+      "ngoId": "ngo_1",
+      "childId": null
+    },
+    {
+      "id": "don_3",
+      "amount": 100,
+      "date": "2026-06-10T09:15:00.000Z",
+      "usage": "Health",
+      "donorId": "donor_1",
+      "ngoId": "ngo_1",
+      "childId": "child_5"
+    },
+    {
+      "id": "don_4",
+      "amount": 1000,
+      "date": "2026-06-12T11:00:00.000Z",
+      "usage": "General",
+      "donorId": "donor_1",
+      "ngoId": "ngo_2",
+      "childId": null
+    },
+    {
+      "id": "don_5",
+      "amount": 300,
+      "date": "2026-06-15T15:20:00.000Z",
+      "usage": "Food",
+      "donorId": "donor_1",
+      "ngoId": "ngo_1",
+      "childId": "child_3"
+    },
+    {
+      "id": "don_6",
+      "amount": 12000,
+      "date": "2026-06-20T10:00:00.000Z",
+      "usage": "Education",
+      "donorId": "donor_1",
+      "ngoId": "ngo_1",
+      "childId": null
+    },
+    {
+      "id": "don_7",
+      "amount": 1100,
+      "date": "2026-06-25T16:45:00.000Z",
+      "usage": "Health",
+      "donorId": "donor_1",
+      "ngoId": "ngo_3",
+      "childId": "child_10"
+    }
+  ],
+  "healthRecords": [
+    {
+      "id": "health_1",
+      "childId": "child_1",
+      "height": 118,
+      "weight": 19.2,
+      "bmi": 13.8,
+      "nutritionScore": 45,
+      "healthReport": "Child is underweight. Shows symptoms of mild fatigue. Nutrition plan with protein supplements advised.",
+      "riskAlerts": "Moderate risk of malnutrition (BMI underweight). Needs weekly tracking.",
+      "recordedById": "volunteer_1",
+      "date": "2026-06-25T12:00:00.000Z"
+    },
+    {
+      "id": "health_2",
+      "childId": "child_2",
+      "height": 135,
+      "weight": 28.5,
+      "bmi": 15.6,
+      "nutritionScore": 85,
+      "healthReport": "Healthy stats. Proper physical development. Continued progress.",
+      "riskAlerts": null,
+      "recordedById": "volunteer_1",
+      "date": "2026-06-25T12:00:00.000Z"
+    },
+    {
+      "id": "health_3",
+      "childId": "child_3",
+      "height": 142,
+      "weight": 34,
+      "bmi": 16.9,
+      "nutritionScore": 60,
+      "healthReport": "Average statistics. Needs iron-rich diet.",
+      "riskAlerts": null,
+      "recordedById": "volunteer_1",
+      "date": "2026-06-26T12:00:00.000Z"
+    },
+    {
+      "id": "health_4",
+      "childId": "child_4",
+      "height": 122,
+      "weight": 21,
+      "bmi": 14.1,
+      "nutritionScore": 78,
+      "healthReport": "Good physical development. Follow-up checked.",
+      "riskAlerts": null,
+      "recordedById": "volunteer_1",
+      "date": "2026-06-24T12:00:00.000Z"
+    },
+    {
+      "id": "health_5",
+      "childId": "child_5",
+      "height": 110,
+      "weight": 14.5,
+      "bmi": 12,
+      "nutritionScore": 38,
+      "healthReport": "Severe acute malnutrition warning. Stunted growth. Prescribed emergency peanut-paste RUTF nutrition packs.",
+      "riskAlerts": "CRITICAL RISK: Severe malnutrition warning. Underweight for height.",
+      "recordedById": "volunteer_1",
+      "date": "2026-06-27T12:00:00.000Z"
+    },
+    {
+      "id": "health_6",
+      "childId": "child_6",
+      "height": 138,
+      "weight": 26.2,
+      "bmi": 13.8,
+      "nutritionScore": 65,
+      "healthReport": "Average weight. Physical health is stable, but needs consistent meals.",
+      "riskAlerts": null,
+      "recordedById": "volunteer_1",
+      "date": "2026-06-28T12:00:00.000Z"
+    },
+    {
+      "id": "health_7",
+      "childId": "child_7",
+      "height": 152,
+      "weight": 42,
+      "bmi": 18.2,
+      "nutritionScore": 90,
+      "healthReport": "Excellent physical and physiological condition.",
+      "riskAlerts": null,
+      "recordedById": null,
+      "date": "2026-06-20T12:00:00.000Z"
+    },
+    {
+      "id": "health_8",
+      "childId": "child_8",
+      "height": 105,
+      "weight": 13.2,
+      "bmi": 12,
+      "nutritionScore": 52,
+      "healthReport": "Borderline underweight. Suggest milk and eggs distribution program.",
+      "riskAlerts": "Mild malnutrition risk. Monitor height/weight.",
+      "recordedById": "volunteer_1",
+      "date": "2026-06-28T12:00:00.000Z"
+    },
+    {
+      "id": "health_9",
+      "childId": "child_9",
+      "height": 124,
+      "weight": 23,
+      "bmi": 15,
+      "nutritionScore": 82,
+      "healthReport": "Good growth indicators. Active participation.",
+      "riskAlerts": null,
+      "recordedById": null,
+      "date": "2026-06-18T12:00:00.000Z"
+    },
+    {
+      "id": "health_10",
+      "childId": "child_10",
+      "height": 130,
+      "weight": 22,
+      "bmi": 13,
+      "nutritionScore": 55,
+      "healthReport": "Underweight. Recommended extra calorie diet program.",
+      "riskAlerts": "Moderate risk of malnutrition (underweight).",
+      "recordedById": null,
+      "date": "2026-06-24T12:00:00.000Z"
+    }
+  ],
+  "educationRecords": [
+    {
+      "id": "edu_1",
+      "childId": "child_1",
+      "learningProgress": "Average. Showing improvement in literacy. Attentive in drawing.",
+      "attendanceRate": 92,
+      "learningDifficultyPrediction": null,
+      "talentIdentification": "Painting & Fine Arts",
+      "date": "2026-06-25T12:00:00.000Z"
+    },
+    {
+      "id": "edu_2",
+      "childId": "child_2",
+      "learningProgress": "Excellent. Excelling in Mathematics and Science. Top of her class.",
+      "attendanceRate": 96,
+      "learningDifficultyPrediction": null,
+      "talentIdentification": "Mathematics & logical reasoning",
+      "date": "2026-06-25T12:00:00.000Z"
+    },
+    {
+      "id": "edu_3",
+      "childId": "child_3",
+      "learningProgress": "Needs Support. Struggles with English and reading comprehension. Frequent absent days due to family farm labor assistance.",
+      "attendanceRate": 68,
+      "learningDifficultyPrediction": "High risk of academic drop-out due to labor dependency.",
+      "talentIdentification": "Sports (Football) and Team Leadership",
+      "date": "2026-06-26T12:00:00.000Z"
+    },
+    {
+      "id": "edu_4",
+      "childId": "child_4",
+      "learningProgress": "Excellent. Highly active participant. Fluent in regional languages.",
+      "attendanceRate": 94,
+      "learningDifficultyPrediction": null,
+      "talentIdentification": "Singing & Classical Music",
+      "date": "2026-06-24T12:00:00.000Z"
+    },
+    {
+      "id": "edu_5",
+      "childId": "child_5",
+      "learningProgress": "Average. Young age. Needs guidance in alphabet writing. Lack of energy affects attention.",
+      "attendanceRate": 88,
+      "learningDifficultyPrediction": "Minor learning delay related to poor nutritional status.",
+      "talentIdentification": "Athletics",
+      "date": "2026-06-27T12:00:00.000Z"
+    },
+    {
+      "id": "edu_6",
+      "childId": "child_6",
+      "learningProgress": "Needs Support. Reading ability below grade-level. Misses classes frequently to take care of infant sibling.",
+      "attendanceRate": 74,
+      "learningDifficultyPrediction": "Moderate dropout risk due to domestic care responsibilities.",
+      "talentIdentification": "Creative Writing & storytelling",
+      "date": "2026-06-28T12:00:00.000Z"
+    },
+    {
+      "id": "edu_7",
+      "childId": "child_7",
+      "learningProgress": "Excellent. Good overall marks. Solves high-school math problems.",
+      "attendanceRate": 91,
+      "learningDifficultyPrediction": null,
+      "talentIdentification": "Chess, Scientific logic",
+      "date": "2026-06-20T12:00:00.000Z"
+    },
+    {
+      "id": "edu_8",
+      "childId": "child_8",
+      "learningProgress": "Average. Needs basic alphabet learning. Responsive to visual charts.",
+      "attendanceRate": 89,
+      "learningDifficultyPrediction": null,
+      "talentIdentification": "Dancing",
+      "date": "2026-06-28T12:00:00.000Z"
+    },
+    {
+      "id": "edu_9",
+      "childId": "child_9",
+      "learningProgress": "Excellent. Fluent English, good at storytelling and drawing.",
+      "attendanceRate": 93,
+      "learningDifficultyPrediction": null,
+      "talentIdentification": "Public Speaking & debate",
+      "date": "2026-06-18T12:00:00.000Z"
+    },
+    {
+      "id": "edu_10",
+      "childId": "child_10",
+      "learningProgress": "Average. Tries hard but misses math classes. Attendance declining.",
+      "attendanceRate": 82,
+      "learningDifficultyPrediction": "At-risk of falling behind due to recent attendance drop.",
+      "talentIdentification": "Poetry writing",
+      "date": "2026-06-24T12:00:00.000Z"
+    }
+  ],
+  "attendance": [
+    {
+      "id": "att_1",
+      "childId": "child_1",
+      "date": "2026-06-25T00:00:00.000Z",
+      "status": "PRESENT"
+    },
+    {
+      "id": "att_2",
+      "childId": "child_2",
+      "date": "2026-06-25T00:00:00.000Z",
+      "status": "PRESENT"
+    },
+    {
+      "id": "att_3",
+      "childId": "child_3",
+      "date": "2026-06-25T00:00:00.000Z",
+      "status": "ABSENT"
+    },
+    {
+      "id": "att_4",
+      "childId": "child_4",
+      "date": "2026-06-25T00:00:00.000Z",
+      "status": "PRESENT"
+    },
+    {
+      "id": "att_5",
+      "childId": "child_5",
+      "date": "2026-06-25T00:00:00.000Z",
+      "status": "PRESENT"
+    },
+    {
+      "id": "att_6",
+      "childId": "child_6",
+      "date": "2026-06-25T00:00:00.000Z",
+      "status": "ABSENT"
+    }
+  ],
+  "aiReports": [
+    {
+      "id": "rep_1",
+      "childId": "child_1",
+      "riskScore": 42,
+      "dropoutPrediction": "LOW",
+      "malnutritionPrediction": "MEDIUM",
+      "learningDifficultyPrediction": "LOW",
+      "talentIdentification": "Painting & Fine Arts",
+      "suggestedIntervention": "Enroll in the mid-day egg/milk meal program. Provide visual arts kits as incentive for continued attendance.",
+      "priorityRanking": 3,
+      "aiSummary": "Rahul shows moderate nutritional risk, but robust learning capability and distinct talent in art. Intervention focuses on diet supplements to alleviate fatigue.",
+      "date": "2026-06-25T12:00:00.000Z"
+    },
+    {
+      "id": "rep_2",
+      "childId": "child_2",
+      "riskScore": 8,
+      "dropoutPrediction": "LOW",
+      "malnutritionPrediction": "LOW",
+      "learningDifficultyPrediction": "LOW",
+      "talentIdentification": "Mathematics & logical reasoning",
+      "suggestedIntervention": "Nominate for National STEM scholarship. Provide advanced math reading list.",
+      "priorityRanking": 5,
+      "aiSummary": "Priya displays outstanding progress across all education indices and maintains perfect physical health. High potential candidate for advanced mentoring.",
+      "date": "2026-06-25T12:00:00.000Z"
+    },
+    {
+      "id": "rep_3",
+      "childId": "child_3",
+      "riskScore": 79,
+      "dropoutPrediction": "HIGH",
+      "malnutritionPrediction": "LOW",
+      "learningDifficultyPrediction": "HIGH",
+      "talentIdentification": "Sports (Football) and Team Leadership",
+      "suggestedIntervention": "Conduct counselor visit with guardian to discuss education values. Offer flexible evening tutoring to offset farm help schedules.",
+      "priorityRanking": 2,
+      "aiSummary": "Amit is at severe risk of drop-out due to a decline in attendance to 68%. Urgent social worker intervention recommended to secure guardian commitment.",
+      "date": "2026-06-26T12:00:00.000Z"
+    },
+    {
+      "id": "rep_4",
+      "childId": "child_4",
+      "riskScore": 12,
+      "dropoutPrediction": "LOW",
+      "malnutritionPrediction": "LOW",
+      "learningDifficultyPrediction": "LOW",
+      "talentIdentification": "Singing & Classical Music",
+      "suggestedIntervention": "Continue general scholarship support. Provide vocal music workshop details.",
+      "priorityRanking": 5,
+      "aiSummary": "Sneha is progressing excellently with regular attendance and good health metrics. Recommend music-themed extra-curricular projects.",
+      "date": "2026-06-24T12:00:00.000Z"
+    },
+    {
+      "id": "rep_5",
+      "childId": "child_5",
+      "riskScore": 88,
+      "dropoutPrediction": "MEDIUM",
+      "malnutritionPrediction": "HIGH",
+      "learningDifficultyPrediction": "HIGH",
+      "talentIdentification": "Athletics",
+      "suggestedIntervention": "EMERGENCY: Immediate deployment of RUTF peanut paste packs. Enroll mother in financial-aid kitchen scheme. Weekly volunteer check-up.",
+      "priorityRanking": 1,
+      "aiSummary": "Vikram exhibits high health risk markers due to severe acute malnutrition. Physical energy is insufficient for classroom concentration, causing mild learning delays.",
+      "date": "2026-06-27T12:00:00.000Z"
+    },
+    {
+      "id": "rep_6",
+      "childId": "child_6",
+      "riskScore": 66,
+      "dropoutPrediction": "HIGH",
+      "malnutritionPrediction": "LOW",
+      "learningDifficultyPrediction": "MEDIUM",
+      "talentIdentification": "Creative Writing & storytelling",
+      "suggestedIntervention": "Provide community daycare options for the infant sibling so Ananya can attend classes. Arrange weekly reading remedial classes.",
+      "priorityRanking": 2,
+      "aiSummary": "Ananya has low health risk but high drop-out risk. Domestic responsibilities are impacting school attendance. Secondary tutoring needed.",
+      "date": "2026-06-28T12:00:00.000Z"
+    }
+  ],
+  "notifications": [
+    {
+      "id": "not_1",
+      "userId": "user_ngo",
+      "type": "RISK_ALERT",
+      "title": "Severe Health Risk Alert: Vikram Singh",
+      "message": "Vikram Singh (Age 7) has been flagged with a critical malnutrition risk (Nutrition Score: 38/100). Emergency intervention required.",
+      "status": "UNREAD",
+      "createdAt": "2026-06-27T12:05:00.000Z"
+    },
+    {
+      "id": "not_2",
+      "userId": "user_ngo",
+      "type": "DONATION_CONFIRMATION",
+      "title": "Donation Received",
+      "message": "Donor Arjun Malhotra has contributed $1,100 towards NGO programs and Child Sponsorship.",
+      "status": "UNREAD",
+      "createdAt": "2026-06-25T16:50:00.000Z"
+    },
+    {
+      "id": "not_3",
+      "userId": "user_volunteer",
+      "type": "VOLUNTEER_REMINDER",
+      "title": "Scheduled Health Visit",
+      "message": "Reminder: Complete weekly health measurement logs for Care & Share Center children by Friday.",
+      "status": "UNREAD",
+      "createdAt": "2026-06-28T09:00:00.000Z"
+    },
+    {
+      "id": "not_4",
+      "userId": "user_donor",
+      "type": "ACHIEVEMENT_BADGE",
+      "title": "Badge Unlocked: Nutrition Champion",
+      "message": "Congratulations! You have funded over $500 in nutritional kits, earning the Nutrition Champion badge.",
+      "status": "UNREAD",
+      "createdAt": "2026-06-25T16:50:00.000Z"
+    },
+    {
+      "id": "not_task_1782769601949",
+      "userId": "user_ngo",
+      "type": "VOLUNTEER_REMINDER",
+      "title": "Task Completed",
+      "message": "Volunteer Sarah Jenkins completed the task: \"Weekly Height & Weight Measurement\"",
+      "status": "UNREAD",
+      "createdAt": "2026-06-29T21:46:41.949Z"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "task_1",
+      "title": "Weekly Height & Weight Measurement",
+      "description": "Log height and weight of all children at Care & Share center to calculate nutritional scoring.",
+      "status": "COMPLETED",
+      "dueDate": "2026-07-02",
+      "ngoId": "ngo_1",
+      "volunteerId": "volunteer_1"
+    },
+    {
+      "id": "task_2",
+      "title": "Distribute Monthly Nutrition Kits",
+      "description": "Distribute peanut paste, eggs, milk and vitamins to flagged underweight children.",
+      "status": "COMPLETED",
+      "dueDate": "2026-06-26",
+      "ngoId": "ngo_1",
+      "volunteerId": "volunteer_1"
+    },
+    {
+      "id": "task_3",
+      "title": "Conduct Dropout Counseling Session",
+      "description": "Visit Amit Patel's home and speak with mother Sita Patel regarding child's high absence rate.",
+      "status": "PENDING",
+      "dueDate": "2026-07-05",
+      "ngoId": "ngo_1",
+      "volunteerId": "volunteer_1"
+    },
+    {
+      "id": "task_4",
+      "title": "Distribute Textbook & Stationery Sets",
+      "description": "Provide study guides and writing notebooks for the new academic semester.",
+      "status": "PENDING",
+      "dueDate": "2026-07-10",
+      "ngoId": "ngo_1",
+      "volunteerId": "volunteer_1"
+    }
+  ]
+}
