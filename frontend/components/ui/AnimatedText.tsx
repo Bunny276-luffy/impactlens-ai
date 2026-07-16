@@ -6,14 +6,14 @@ import { cn } from '@/lib/utils';
 interface AnimatedTextProps {
   text: string;
   className?: string;
-  el?: keyof JSX.IntrinsicElements;
+  el?: any;
   once?: boolean;
 }
 
 export function AnimatedText({ text, el: Wrapper = 'p', className, once = true }: AnimatedTextProps) {
   const words = text.split(' ');
 
-  const container = {
+  const container: any = {
     hidden: { opacity: 0 },
     visible: (i = 1) => ({
       opacity: 1,
@@ -21,7 +21,7 @@ export function AnimatedText({ text, el: Wrapper = 'p', className, once = true }
     }),
   };
 
-  const child = {
+  const child: any = {
     visible: {
       opacity: 1,
       y: 0,

@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ArrowRight, Activity, Users, Zap, Shield, BarChart3, Database, ChevronRight, CheckCircle2 } from 'lucide-react';
-import { Navbar } from '@/components/layout/Navbar';
+
 import { AnimatedText } from '@/components/ui/AnimatedText';
 import { Constellation } from '@/components/ui/Constellation';
 import { TiltCard } from '@/components/ui/TiltCard';
