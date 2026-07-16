@@ -54,7 +54,7 @@ const Card = ({ card }: { card: typeof cards[0] }) => {
   return (
     <div
       key={card.id}
-      className="group relative h-[60vh] min-h-[400px] w-[60vw] min-w-[600px] max-w-[900px] overflow-hidden rounded-3xl bg-neutral-200 shadow-[0_0_50px_rgba(0,0,0,0.5)]"
+      className="group relative h-[60vh] min-h-[400px] w-[80vw] min-w-[300px] sm:min-w-[400px] md:min-w-[600px] max-w-[900px] overflow-hidden rounded-3xl bg-neutral-200 shadow-[0_0_50px_rgba(0,0,0,0.5)]"
     >
       <div
         style={{

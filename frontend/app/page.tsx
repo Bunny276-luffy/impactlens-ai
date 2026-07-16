@@ -91,7 +91,7 @@ export default function Home() {
             <span className="text-xs font-medium text-cyan uppercase tracking-widest">Platform 2.0 Now Live</span>
           </motion.div>
 
-          <h1 className="text-6xl md:text-8xl font-black text-white tracking-tight mb-8">
+          <h1 className="text-4xl md:text-6xl lg:text-8xl font-black text-white tracking-tight mb-8">
             Amplify Your <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan to-white animate-gradient-x">Impact at Scale.</span>
           </h1>
@@ -165,7 +165,7 @@ export default function Home() {
               <div className="relative z-10 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-violet/10 border border-violet/20 text-violet text-xs font-bold uppercase tracking-wider shadow-[0_0_15px_rgba(139,92,246,0.3)]">
                 <Activity className="w-3.5 h-3.5 animate-pulse" /> Telemetry Engine
               </div>
-              <h2 className="relative z-10 text-4xl md:text-5xl font-bold text-white leading-tight">
+              <h2 className="relative z-10 text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
                 Stop guessing. <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet via-pink-500 to-cyan animate-gradient-x">Start measuring.</span>
               </h2>
@@ -203,7 +203,7 @@ export default function Home() {
         <Constellation />
         <div className="max-w-7xl mx-auto relative z-20">
           <div className="mb-12 text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Engineered for <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan to-violet">Mission Critical</span> scale.</h2>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">Engineered for <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan to-violet">Mission Critical</span> scale.</h2>
             <p className="text-xl text-text-secondary max-w-3xl mx-auto">
               Everything you need to manage your organization, orchestrate volunteers, and measure impact, built on an enterprise-grade stack.
             </p>
@@ -241,7 +241,7 @@ export default function Home() {
       <section className="relative z-20 py-16 px-6 bg-transparent text-center">
         <div className="max-w-4xl mx-auto glass-panel rounded-3xl p-8 md:p-12 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-radial-cyan opacity-5" />
-          <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 relative z-10">Ready to transform your NGO?</h2>
+          <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold text-white mb-6 relative z-10">Ready to transform your NGO?</h2>
           <p className="text-lg text-text-secondary mb-10 relative z-10 max-w-2xl mx-auto">
             Join the most visionary non-profits using ImpactLens AI to scale their operations and prove their impact to the world.
           </p>
